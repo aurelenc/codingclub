@@ -3,6 +3,7 @@ float vx = random(1, 5);
 float vy = random(1, 5);
 boolean sx = true;
 boolean sy = true;
+Ball ball = new Ball(50);
 
 void setup()
 {
@@ -11,31 +12,6 @@ void setup()
   fill(255, 0, 0);
 
 }
-
-//void draw()
-//{
-//  fill(0, 0, 255);
-//  background(100);
-//  ellipse(pos.x, pos.y, 50, 50);
-//  while(pos.x < 575 && pos.y < 575) {
-//    pos.x = pos.x + vx;
-//    pos.y = pos.y + vy;
-//  }
-//  while(pos.x > 25 && pos.y < 575) {
-//    pos.x = pos.x - vx;
-//    pos.y = pos.y + vy;
-//  }
-//  while(pos.x < 575 && pos.y > 25) {
-//    pos.x = pos.x + vx;
-//    pos.y = pos.y - vy;
-//  }
-//  while(pos.x > 25 && pos.y > 25) {
-//    pos.x = pos.x - vx;
-//    pos.y = pos.y - vy;
-//  }
-//}
-
-
 
 
 
@@ -76,10 +52,69 @@ void draw()
   }
   print(sx);
   print(sy);
+  print(vx);
+  print(vy);
   print(pos);
+  //ball.display();
 }
+  
+  
+  
+  
+  
+  class Ball
+  {
+    PVector pos;
+    int size;
+    Ball(int _size)
+    {
+      pos = new PVector(width/2, height/2);
+      size = _size;
+    }
+    void display()
+    {
+      circle(pos.x, pos.y, size);
+    }
+  }
+  
+  
+  
+  
+  
 
 
+
+
+
+
+
+
+
+
+
+
+//void draw()
+//{
+//  fill(0, 0, 255);
+//  background(100);
+//  ellipse(pos.x, pos.y, 50, 50);
+//  while(pos.x < 575 && pos.y < 575) {
+//    pos.x = pos.x + vx;
+//    pos.y = pos.y + vy;
+//  }
+//  while(pos.x > 25 && pos.y < 575) {
+//    pos.x = pos.x - vx;
+//    pos.y = pos.y + vy;
+//  }
+//  while(pos.x < 575 && pos.y > 25) {
+//    pos.x = pos.x + vx;
+//    pos.y = pos.y - vy;
+//  }
+//  while(pos.x > 25 && pos.y > 25) {
+//    pos.x = pos.x - vx;
+//    pos.y = pos.y - vy;
+//  }
+//}
 
 
 
